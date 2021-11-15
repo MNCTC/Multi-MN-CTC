@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import sys
 
 datapath = sys.argv[1] + "/"
 INFERENCE_LANGUAGE = sys.argv[2] 
@@ -21,6 +22,6 @@ inferenceQuerySet = datapath+'/test_xz.pkl'
 N=20 #matched train and test conditions
 
 model_store_path="./MN_model/Multi_MNCTC_"+str(N)+"shots_episodic_batch10"
-log_file_path=model_store_path+"/inferencelog"
-inference_model=model_store_path+"/model_53_20_1.pth"
+log_file_path=model_store_path+"/"+INFERENCE_LANGUAGE+ "log"
+inference_model=model_store_path+"/model_53_20_8.pth"
 inference_results_file=model_store_path+"/inference_"+INFERENCE_LANGUAGE+".txt"

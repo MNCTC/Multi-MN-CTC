@@ -53,14 +53,14 @@ class SupportDataSet(Dataset):
 
     def __len__(self):
         length=0
-        for ltr in self.letters:
+        for ltr in self.labels:
             if(ltr in self.data):
                 length += len(self.data[ltr])
         return length
         
     def __getitem__(self, ix):
         S_set = []
-        for classno in range (len(self.letters)):
+        for classno in range (len(self.labels)):
             new_details=[]
             eachLetter = self.L_index_to_label[classno]  
             if eachLetter == 'blank':  
