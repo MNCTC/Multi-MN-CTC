@@ -258,8 +258,8 @@ logging.info('MN-CTC Inference')
 N=config.N
 q=1;#q=1 is supported as of now
 batch_size=1 # batch_size=1 is recommended as of now
-print(config.inferenceSupportSet)
-print(config.inferenceQuerySet)
+logging.info(config.inferenceSupportSet)
+logging.info(config.inferenceQuerySet)
 
 test_dataset=SupportDataSet(supportdatafile=config.inferenceSupportSet, nshot=N, nqueries=q, transform=transforms.Compose([stackup()]))
 test_dataloader = DataLoader(test_dataset, batch_size=batch_size, collate_fn=collate_wrapper)

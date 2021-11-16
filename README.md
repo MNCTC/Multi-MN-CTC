@@ -4,6 +4,10 @@
 *   Kaldi toolkit
 *   pytorch 1.4.0
 
+### Input Data
+Training and Inference support-set and batch utterance files of Hindi, Gujarati and Marathi can be downloaded from here :
+https://drive.google.com/drive/folders/11_ruvvWcBgRgscSLyRPwxqPwVT4RvEzV?usp=sharing
+
 ### 1. Feature Extraction
 39 dimension MFCC (25 ms frames shifted by 10ms each time) using Kaldi toolkit 
 
